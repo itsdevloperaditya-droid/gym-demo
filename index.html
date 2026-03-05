@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <title>⚡ LEGACY GYM · next-gen website demo</title>
     <!-- Google Fonts for extra swag -->
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -591,6 +591,425 @@
             background: #f97316;
             color: black;
         }
+
+        /* ============================================ */
+        /* 🔥 ULTIMATE RESPONSIVE CODE - PHONE/TABLET */
+        /* ============================================ */
+
+        /* LARGE TABLETS (max-width: 1024px) */
+        @media screen and (max-width: 1024px) {
+            .hero h1 {
+                font-size: 4rem;
+            }
+            
+            .hero h1 span {
+                font-size: 5rem;
+            }
+            
+            .hero-3d-text {
+                font-size: 10rem;
+                opacity: 0.1;
+            }
+            
+            .demo-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+            
+            .stats-container {
+                flex-wrap: wrap;
+                gap: 3rem;
+            }
+            
+            .stat-number {
+                font-size: 4rem;
+            }
+        }
+
+        /* SMALL TABLETS & BIG PHONES (max-width: 768px) */
+        @media screen and (max-width: 768px) {
+            /* Navbar */
+            .navbar {
+                width: 95%;
+                padding: 0.8rem 1.5rem;
+            }
+            
+            .logo {
+                font-size: 1.5rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            /* Add hamburger icon */
+            .navbar {
+                position: relative;
+            }
+            
+            .navbar::after {
+                content: '☰';
+                font-size: 2rem;
+                color: #f97316;
+                cursor: pointer;
+            }
+            
+            /* Show nav-links when active - to be used with JS */
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(10, 10, 10, 0.95);
+                backdrop-filter: blur(10px);
+                padding: 2rem;
+                gap: 1.5rem;
+                text-align: center;
+                border-radius: 0 0 30px 30px;
+                border: 1px solid #f97316;
+                z-index: 1000;
+            }
+            
+            /* Hero Section */
+            .hero {
+                flex-direction: column;
+                padding-top: 100px;
+                text-align: center;
+            }
+            
+            .hero-content {
+                width: 100%;
+                margin-bottom: 3rem;
+            }
+            
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .hero h1 span {
+                font-size: 4rem;
+            }
+            
+            .hero-badge {
+                font-size: 0.9rem;
+                padding: 0.4rem 1rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem !important;
+                margin: 0 auto;
+            }
+            
+            .hero-3d-text {
+                font-size: 6rem;
+                bottom: -20px;
+                right: -20px;
+            }
+            
+            /* Flip Card */
+            .hero-card {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+            
+            .flip-card {
+                width: 350px;
+                height: 450px;
+                animation: none;
+                transform: rotateY(0deg) rotateX(5deg);
+            }
+            
+            .flip-card:hover .flip-card-inner {
+                transform: rotateY(180deg);
+            }
+            
+            /* Demo Section */
+            .demo-section {
+                padding: 4rem 5%;
+            }
+            
+            .section-title {
+                font-size: 2.8rem;
+            }
+            
+            .demo-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            /* Judge Zone */
+            .judge-zone {
+                padding: 3rem 5%;
+            }
+            
+            .judge-title {
+                font-size: 2.2rem;
+            }
+            
+            .judge-buttons {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: center;
+            }
+            
+            .judge-btn {
+                width: 100%;
+                max-width: 300px;
+                padding: 1rem 2rem;
+                font-size: 1.2rem;
+            }
+            
+            .judge-result {
+                font-size: 1.5rem;
+                padding: 1.5rem;
+            }
+            
+            /* Stats Container */
+            .stats-container {
+                flex-direction: column;
+                gap: 2rem;
+                padding: 3rem 5%;
+            }
+            
+            .stat-number {
+                font-size: 3.5rem;
+            }
+            
+            /* Pricing Cards */
+            .pricing-showcase {
+                flex-direction: column;
+                align-items: center;
+                gap: 2rem;
+                padding: 3rem 5%;
+            }
+            
+            .price-card-3d {
+                width: 100%;
+                max-width: 350px;
+                transform: rotateY(0deg) rotateX(0deg) !important;
+                margin: 0 auto;
+            }
+            
+            .price-card-3d:hover {
+                transform: translateY(-20px) !important;
+            }
+            
+            /* Footer */
+            .footer-content {
+                flex-direction: column;
+                gap: 2rem;
+                text-align: center;
+            }
+            
+            .social-icon {
+                width: 50px;
+                height: 50px;
+            }
+            
+            /* Hide particles on mobile for performance */
+            .particle {
+                display: none;
+            }
+            
+            .cyber-grid {
+                background-size: 30px 30px;
+                opacity: 0.5;
+            }
+        }
+
+        /* MOBILE PHONES (max-width: 480px) */
+        @media screen and (max-width: 480px) {
+            /* Navbar */
+            .navbar {
+                padding: 0.6rem 1rem;
+            }
+            
+            .logo {
+                font-size: 1.3rem;
+            }
+            
+            /* Hero */
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero h1 span {
+                font-size: 3rem;
+            }
+            
+            .hero p {
+                font-size: 1rem !important;
+            }
+            
+            .flip-card {
+                width: 280px;
+                height: 380px;
+            }
+            
+            .flip-card-front i {
+                font-size: 5rem !important;
+            }
+            
+            .flip-card-front h2 {
+                font-size: 2rem !important;
+            }
+            
+            /* Section Titles */
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .section-title-glitch {
+                font-size: 2rem;
+            }
+            
+            /* Demo Cards */
+            .holo-card, .neon-card, .liquid-card {
+                padding: 1.5rem;
+            }
+            
+            .holo-card h3, .neon-card h3, .liquid-card h3 {
+                font-size: 1.5rem !important;
+            }
+            
+            /* Judge Zone */
+            .judge-title {
+                font-size: 1.8rem;
+            }
+            
+            .judge-btn {
+                font-size: 1rem;
+                padding: 0.8rem 1.5rem;
+            }
+            
+            .judge-result {
+                font-size: 1.2rem;
+                padding: 1rem;
+            }
+            
+            /* Stats */
+            .stat-number {
+                font-size: 3rem;
+            }
+            
+            .stat-block p {
+                font-size: 0.9rem;
+            }
+            
+            /* Price Cards */
+            .price-card-3d {
+                padding: 1.5rem;
+            }
+            
+            .price-card-3d h3 {
+                font-size: 1.5rem;
+            }
+            
+            .price-card-3d div[style*="font-size: 3rem"] {
+                font-size: 2.5rem !important;
+            }
+            
+            .price-card-3d div[style*="font-size: 4rem"] {
+                font-size: 3rem !important;
+            }
+            
+            .price-card-3d ul {
+                font-size: 0.9rem;
+            }
+            
+            /* Footer */
+            .footer-content .logo {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* EXTRA SMALL DEVICES (max-width: 360px) */
+        @media screen and (max-width: 360px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero h1 span {
+                font-size: 2.5rem;
+            }
+            
+            .hero-badge {
+                font-size: 0.8rem;
+            }
+            
+            .flip-card {
+                width: 240px;
+                height: 320px;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .judge-title {
+                font-size: 1.5rem;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* LANDSCAPE MODE ON PHONES */
+        @media screen and (max-height: 500px) and (orientation: landscape) {
+            .hero {
+                padding-top: 80px;
+                min-height: auto;
+            }
+            
+            .hero-content {
+                margin-bottom: 1rem;
+            }
+            
+            .flip-card {
+                width: 250px;
+                height: 300px;
+            }
+            
+            .stats-container {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+        }
+
+        /* TOUCH DEVICE OPTIMIZATIONS */
+        @media (hover: none) and (pointer: coarse) {
+            .judge-btn:hover::before {
+                display: none;
+            }
+            
+            .judge-btn:active {
+                background: #f97316;
+                color: black;
+            }
+            
+            .price-card-3d:hover {
+                transform: translateY(-10px) !important;
+            }
+        }
+
+        /* FIX FOR NOTCHED PHONES */
+        @supports (padding: max(0px)) {
+            @media screen and (max-width: 768px) {
+                .navbar {
+                    padding-left: max(1.5rem, env(safe-area-inset-left));
+                    padding-right: max(1.5rem, env(safe-area-inset-right));
+                }
+                
+                .hero, .demo-section, .judge-zone, .stats-container, .pricing-showcase {
+                    padding-left: max(5%, env(safe-area-inset-left));
+                    padding-right: max(5%, env(safe-area-inset-right));
+                }
+            }
+        }
     </style>
 </head>
 <body>
@@ -858,6 +1277,64 @@
             icon.addEventListener('mouseleave', () => {
                 icon.style.transform = 'translate(0, 0)';
             });
+        });
+
+        // Hamburger Menu
+        document.addEventListener('DOMContentLoaded', function() {
+            const navbar = document.querySelector('.navbar');
+            const navLinks = document.querySelector('.nav-links');
+            
+            // Check if we're on mobile
+            if (window.innerWidth <= 768) {
+                // Create hamburger button
+                const hamburger = document.createElement('div');
+                hamburger.className = 'hamburger';
+                hamburger.innerHTML = '☰';
+                hamburger.style.cssText = `
+                    font-size: 2rem;
+                    color: #f97316;
+                    cursor: pointer;
+                    z-index: 1001;
+                `;
+                
+                // Add to navbar
+                navbar.appendChild(hamburger);
+                
+                // Remove the CSS pseudo-element content
+                const style = document.createElement('style');
+                style.textContent = `
+                    @media screen and (max-width: 768px) {
+                        .navbar::after {
+                            content: none !important;
+                        }
+                    }
+                `;
+                document.head.appendChild(style);
+                
+                // Toggle menu
+                hamburger.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                    this.innerHTML = navLinks.classList.contains('active') ? '✕' : '☰';
+                });
+                
+                // Close menu when clicking a link
+                navLinks.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navLinks.classList.remove('active');
+                        hamburger.innerHTML = '☰';
+                    });
+                });
+            }
+        });
+
+        // Handle resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                const navLinks = document.querySelector('.nav-links');
+                const hamburger = document.querySelector('.hamburger');
+                if (navLinks) navLinks.classList.remove('active');
+                if (hamburger) hamburger.remove();
+            }
         });
     </script>
 </body>
